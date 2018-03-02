@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/cglib-nodep-3.2.4.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/client-combined-3.3.1-nodeps.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/commons-lang3-3.5.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/cssparser-0.9.21.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/guava-21.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/htmlunit-2.24.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/htmlunit-core-js-2.23.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/htmlunit-driver-2.24.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/javax.servlet-api-3.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/jetty-io-9.4.1.v20170120.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/jetty-util-9.4.1.v20170120.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/neko-htmlunit-2.24.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/phantomjsdriver-1.4.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/serializer-2.7.2.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/websocket-api-9.2.20.v20161216.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/websocket-client-9.2.20.v20161216.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/websocket-common-9.2.20.v20161216.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/xalan-2.7.2.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="/Users/williambigno/Desktop/Appium jars/java-client-5.0.0-BETA8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
