@@ -1,0 +1,48 @@
+teps:
+machine:
+  xcode:
+    version: "9.0"
+  environment:
+    MATCH_KEYCHAIN_NAME: "circle"
+    MATCH_KEYCHAIN_PASSWORD: "circle"
+    
+ dependencies:
+  pre:
+    - xcrun instruments -w "iPhone 8 (11.0) [" || true
+
+dependencies:
+
+       - run: brew upgrade node
+       - run: npm install -g npm
+       - run: npm install -g appium
+       - run: npm install wd
+        -run: npm install -g ios-sim
+       - run: brew install maven
+  
+  - run:
+            name: Start Appium
+            command: appium --address 127.0.0.1 --port 4723
+            background : true
+       - run: mvn test -DsuiteXmlFile=“test.xml"
+ 
+    
+  override:
+  
+       - set -o pipefail &&
+       xcodebuild
+        CODE_SIGNING_REQUIRED=NO
+        CODE_SIGN_IDENTITY=
+        PROVISIONING_PROFILE=
+         -sdk iphonesimulator
+        -destination 'platform=iOS Simulator,OS=11.0,name=iPhone 8'
+        -workspace MyWorkspace.xcworkspace
+        -scheme "My Scheme"
+        clean build test |
+        tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+        xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
+
+test:
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+  
