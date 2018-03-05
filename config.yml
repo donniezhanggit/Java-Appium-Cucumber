@@ -1,0 +1,58 @@
+version: 2
+jobs:
+  build-and-test:
+    macos:
+    xcode: "9.2.0"
+
+- run:
+      name: Install node@8
+      command: |
+            set +e
+            touch $BASH_ENV
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+            echo 'nvm install v8' >> $BASH_ENV
+            echo 'nvm alias default v8' >> $BASH_ENV
+      - run: node -- version || true
+      
+- run:
+      name: Install
+      command: npm install
+
+- run:
+      name: Install appium server
+      command: |
+          sudo npm update -g
+          sudo npm install appium
+          sudo npm install wd
+
+- run:
+      name: pre-start simulator
+      command: xcrun instruments -w "iPhone 8 (11.2) [" || true
+
+- run:
+      name: Start appium server
+      command: appium --address 0.0.0.0 --port 4723
+    background : true
+    
+test:
+    steps:
+      - run:
+          name: Save test results
+          command: |
+            mkdir -p ~/cucumber
+            bundle exec cucumber --format junit --out ~/cucumber/junit.xml
+            bundle exec cucumber pretty --format json --out ~/cucumber/tests.cucumber
+          when: always
+      - store_test_results:
+          path: ~/cucumber
+      - store_artifacts:
+          path: ~/cucumber
+
+   
+workflows:
+  version: 2
+      jobs:
+        - build-and-test
+        - test

@@ -1,0 +1,17 @@
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
+export PATH=$PATH:/bin:/usr/bin
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME/bin
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME
+export PATH="~/Library/Android/sdk/emulator:$PATH"
+export PATH=$PATH:$ANDROID_HOME/emulator
+export DYLD_LIBRARY_PATH="$ANDROID_HOME/emulator/lib64:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH="$ANDROID_HOME/emulator/lib64/qt/lib:$DYLD_LIBRARY_PATH"
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/lib
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/bin/chromedriver:$PATH"
+export PATH="/usr/local/bin/geckodriver:$PATH"
